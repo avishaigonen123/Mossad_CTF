@@ -72,29 +72,40 @@ This repository contains the challenge details for the Mossad CTF. Participants 
 ## Getting Started
 
 ### Prerequisites
-- **Python** (version 3.6 or higher)
-- **pip** (Python package installer)
+
+- Python (version 3.6 or higher)
+- pip (Python package installer)
 
 ### Installation
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/avishaigonen123/Mossad_CTF.git
-   cd Mossad_CTF
-Install necessary libraries:
-sh
-Copy code
-pip install cryptography
-Usage
-Follow the steps outlined in the challenge details to progress through each stage.
-Use the provided scripts and instructions to perform the necessary tasks.
-Submission
-Submit your encrypted image and the script/code you used for the encryption.
-Ensure your code is well-documented and can be easily understood.
-Resources
-Python Cryptography Documentation
-AES Encryption Explanation
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-For any questions or issues, please open an issue in this repository or contact [your email/contact info].
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/avishaigonen123/Mossad_CTF.git
+    cd Mossad_CTF
+    ```
+
+2. Install necessary libraries:
+    ```sh
+    pip install cryptography
+    ```
+
+## Usage
+
+Follow the steps outlined in the challenge details to progress through each stage. Use the provided scripts and instructions to perform the necessary tasks.
+
+## Submission
+
+Submit your encrypted image and the script/code you used for the encryption. Ensure your code is well-documented and can be easily understood.
+
+## Resources
+
+- [Python Cryptography Documentation](https://cryptography.io/en/latest/)
+- [AES Encryption Explanation](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or issues, please open an issue in this repository or contact [avishaigonen@gmail.com].
