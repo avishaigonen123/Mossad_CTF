@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mossad</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('images/mossad.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .instructions {
+            background-color: rgba(0, 0, 0, 0.7); /* More opaque background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* Adjust width as needed */
+            max-width: 600px;
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .instructions h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="login.html" class="login-button">Login</a>
+    <div class="instructions">
+        <h2>CTF Challenge: Mossad Encryption Task</h2>
+        <p>Welcome to the Mossad challenge! As part of your mission, you will need to demonstrate your encryption skills.</p>
+        <p>Here are your keys:</p>
+        <ul>
+            <li><strong>KEY:</strong> b'Secr3tKeyForAES!'</li>
+            <li><strong>IV:</strong> [125, 207, 64, 72, 107, 49, 82, 196, 226, 165, 22, 134, 228, 183, 201, 120]</li>
+        </ul>
+        <p>Your task is to encrypt the provided image using AES-128-CBC mode. Prove your expertise and show us what you've got!</p>
+        <p>Good luck, agent.</p>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives import padding
 
 # Encryption key and initialization vector as arrays of integers
 KEY = b'Secr3tKeyForAES!'
-IV =  [125, 207, 64, 72, 107, 49, 82, 196, 226, 165, 22, 134, 228, 183, 201, 120]
+IV =   [125, 207, 64, 72, 107, 49, 82, 196, 226, 165, 22, 134, 228, 183, 201, 120]
 # Convert arrays to bytes
 key = bytes(KEY)
 iv = bytes(IV)
