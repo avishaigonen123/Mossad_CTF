@@ -67,6 +67,8 @@
             font-weight: bold;
         }
     </style>
+    <!-- Include the crypto-js library for MD5 hashing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1-crypto-js.js"></script>
 </head>
 <body>
     <div class="login-box">
@@ -89,32 +91,20 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Send POST request to authenticate.php
-            fetch('authenticate.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username: username, password: password })
-            })
-            .then(response => {
-                return response.json().then(data => {
-                    return {status: response.status, body: data};
-                });
-            })
-            .then(data => {
-                if (data.status === 200 && data.body.authenticated) {
-                    window.location.href = data.body.redirect_url; // Redirect on successful login
-                } else {
-                    document.getElementById('errorMessage').innerText = 'Invalid username or password'; // Display error message
-                    document.getElementById('errorMessage').style.display = 'block'; // Show error message
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('errorMessage').innerText = 'Failed to authenticate. Please try again.'; // Generic error message
-                document.getElementById('errorMessage').style.display = 'block'; // Show error message
-            });
+            const correctUsername = 'EliCopter';
+            const correctPasswordHash = '0e00b78c60d6fe3b76c6c9f70fcd0c5f'; // MD5 hash of 'MossadRules'
+
+            // Hash the password input with MD5 using the crypto-js library
+            var passwordHash = CryptoJS.MD5(password).toString(CryptoJS.enc.Hex);
+
+            if (username === correctUsername && passwordHash === correctPasswordHash) {
+                // Authentication successful
+                window.location.href = 'capturedtheflag.html'; // Redirect on successful login
+            } else {
+                // Authentication failed
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorMessage').textContent = 'Invalid username or password';
+            }
         });
     </script>
 </body>
